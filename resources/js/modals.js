@@ -19,5 +19,7 @@ Livewire.on('showBootstrapModal', () => {
 Livewire.on('hideModal', () => {
     let modal = Modal.getInstance(modalsElement);
 
-    modal.hide();
+    if (modal) {
+        modal.hide();
+    }
 });
